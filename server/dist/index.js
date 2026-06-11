@@ -1,17 +1,13 @@
-import express, { Application, Response, Request } from "express";
+import express from "express";
 import "dotenv/config";
-
-const app: Application = express();
+const app = express();
 const PORT = process.env.PORT || 7000;
-
-app.get("/", (req: Request, res: Response) => {
-  return res.send("We are officially starting the server!!!");
+app.get("/", (req, res) => {
+    return res.send("We are officially starting the server!!!");
 });
-
 app.listen(PORT, () => {
-  console.log(`Server is running on PORT ${PORT}`);
+    console.log(`Server is running on PORT ${PORT}`);
 });
-
 // ! In package.json
 // start: command starts the server in which the typescript that has been compiled as js in dist folder.
 // server: command watched the compiled js in dist and restart the server to make sure to update the any changes .
