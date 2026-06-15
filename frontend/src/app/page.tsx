@@ -1,11 +1,9 @@
-import React from "react";
+import HeroSection from "@/components/base/HeroSection";
 
 function page() {
   return (
     <div>
-      <h1 className="text-2xl text-red-500 font-bold">
-        Hello My Name is Rahul
-      </h1>
+      <HeroSection />
     </div>
   );
 }
