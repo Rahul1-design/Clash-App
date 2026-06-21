@@ -140,6 +140,10 @@ body {
   50% { background-position: 100% 50%; }
 }
 
+.anim-delay-1 { animation-delay: 1s; }
+.anim-delay-2 { animation-delay: 2s; }
+.anim-delay-4 { animation-delay: 4s; }
+
 @layer base {
   * {
     @apply border-border outline-ring/50;

@@ -8,12 +8,10 @@ function HeroSection() {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-purple-400/20 rounded-full blur-3xl animate-blob" />
         <div
-          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-pink-400/20 rounded-full blur-3xl animate-blob"
-          style={{ animationDelay: "2s" }}
+          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-pink-400/20 rounded-full blur-3xl animate-blob anim-delay-2"
         />
         <div
-          className="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-purple-300/10 rounded-full blur-3xl animate-blob"
-          style={{ animationDelay: "4s" }}
+          className="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-purple-300/10 rounded-full blur-3xl animate-blob anim-delay-4"
         />
       </div>
 
@@ -104,8 +102,7 @@ function HeroSection() {
             </div>
 
             <div
-              className="absolute bottom-12 right-0 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-4 border border-slate-100 animate-float shadow-purple-500/10"
-              style={{ animationDelay: "1s" }}
+              className="absolute bottom-12 right-0 bg-white/90 backdrop-blur-sm rounded-2xl shadow-xl p-4 border border-slate-100 animate-float shadow-purple-500/10 anim-delay-1"
             >
               <div className="flex items-center gap-3">
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold text-lg shadow-lg">

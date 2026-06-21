@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Mail, Lock, ArrowRight } from "lucide-react";
+import { Mail, Lock, User, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-function LoginPage() {
+function SignupPage() {
   return (
     <div className="min-h-screen flex">
       <div className="hidden lg:flex lg:w-[55%] bg-gradient-to-br from-purple-950 via-purple-900 to-pink-900 relative overflow-hidden items-center justify-center">
@@ -60,13 +60,29 @@ function LoginPage() {
           <div className="bg-white rounded-2xl shadow-xl shadow-slate-200/50 p-8 space-y-6 border border-slate-100">
             <div className="space-y-1">
               <h2 className="text-3xl font-bold text-slate-900">
-                Welcome back
+                Create account
               </h2>
-              <p className="text-slate-500">
-                Sign in to your account to continue
-              </p>
+              <p className="text-slate-500">Start clashing in minutes</p>
             </div>
             <form className="space-y-4">
+              <div className="space-y-2">
+                <Label
+                  htmlFor="name"
+                  className="text-sm font-medium text-slate-700"
+                >
+                  Name
+                </Label>
+                <div className="relative">
+                  <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="John Doe"
+                    className="pl-10 h-12 rounded-xl border-slate-200 bg-slate-50 focus:bg-white transition-colors"
+                  />
+                </div>
+              </div>
               <div className="space-y-2">
                 <Label
                   htmlFor="email"
@@ -86,33 +102,43 @@ function LoginPage() {
                 </div>
               </div>
               <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <Label
-                    htmlFor="password"
-                    className="text-sm font-medium text-slate-700"
-                  >
-                    Password
-                  </Label>
-                </div>
+                <Label
+                  htmlFor="password"
+                  className="text-sm font-medium text-slate-700"
+                >
+                  Password
+                </Label>
                 <div className="relative">
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                   <Input
                     type="password"
                     id="password"
                     name="password"
-                    placeholder="Enter your password"
+                    placeholder="Create a strong password"
                     className="pl-10 h-12 rounded-xl border-slate-200 bg-slate-50 focus:bg-white transition-colors"
                   />
                 </div>
-                <a
-                  href="#"
-                  className="text-sm text-purple-600 hover:text-purple-700 font-medium"
+              </div>
+              <div className="space-y-2">
+                <Label
+                  htmlFor="password"
+                  className="text-sm font-medium text-slate-700"
                 >
-                  Forgot password?
-                </a>
+                  Confirm Password
+                </Label>
+                <div className="relative">
+                  <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+                  <Input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Confirm your password"
+                    className="pl-10 h-12 rounded-xl border-slate-200 bg-slate-50 focus:bg-white transition-colors"
+                  />
+                </div>
               </div>
               <Button className="w-full h-12 rounded-xl bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-base font-medium shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 cursor-pointer">
-                Sign in
+                Create account
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </form>
@@ -166,12 +192,12 @@ function LoginPage() {
               </Button>
             </div>
             <p className="text-center text-sm text-slate-500">
-              Don&apos;t have an account?{" "}
+              Already have an account?{" "}
               <Link
-                href="/signup"
+                href="/login"
                 className="text-purple-600 hover:text-purple-700 font-medium"
               >
-                Sign up
+                Sign in
               </Link>
             </p>
           </div>
@@ -181,4 +207,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default SignupPage;
