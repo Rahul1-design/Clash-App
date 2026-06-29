@@ -130,8 +130,8 @@ function SignupPage() {
                   <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                   <Input
                     type="password"
-                    id="password"
-                    name="password"
+                    id="cpassword"
+                    name="confirm_password"
                     placeholder="Confirm your password"
                     className="pl-10 h-12 rounded-xl border-slate-200 bg-slate-50 focus:bg-white transition-colors"
                   />

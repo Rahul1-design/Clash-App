@@ -1,9 +1,18 @@
 import express from "express";
 import "dotenv/config";
+import path from "path";
+import { fileURLToPath } from "url";
 const app = express();
 const PORT = process.env.PORT || 7000;
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+//set a view engine setup
+app.set("view engine", "ejs");
+app.set("views", path.resolve(__dirname, "./views"));
 app.get("/", (req, res) => {
-    return res.send("We are officially starting the server😍😍!!!");
+    // return res.send("We are officially starting the server😍😍!!!");
+    return res.render("Welcome");
 });
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
