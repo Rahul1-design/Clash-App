@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", async (req: Request, res: Response) => {
   // return res.send("We are officially starting the server😍😍!!!");
-  return res.render("Welcome");
+  return res.render("Welcome", { name: "Rahul Shrestha" });
 });
 
 app.listen(PORT, () => {

@@ -10,9 +10,9 @@ app.use(express.urlencoded({ extended: false }));
 //set a view engine setup
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "./views"));
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
     // return res.send("We are officially starting the server😍😍!!!");
-    return res.render("Welcome");
+    return res.render("Welcome", { name: "Rahul Shrestha" });
 });
 app.listen(PORT, () => {
     console.log(`Server is running on PORT ${PORT}`);
